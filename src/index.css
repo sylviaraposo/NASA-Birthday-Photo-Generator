@@ -5,7 +5,7 @@ body {
   font-size: 1rem;
   letter-spacing: 2.2px;
   -webkit-font-smoothing: antialiased;
-  background-color: black;
+  background-color: rgb(238, 238, 238);
   -moz-osx-font-smoothing: grayscale;
 }
 
