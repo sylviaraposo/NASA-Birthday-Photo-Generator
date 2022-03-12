@@ -29,7 +29,6 @@ function App() {
       api_key: '8FQFwbqE2ww9Aq89F6NtscMUn1J9Pjk0B19Z2NI6'
     }
   }).then((apiData) => {
-    // console.log(apiData.data);
     setBirthdateResultPhoto(apiData.data)
   })
 }, [userBirthdate])
@@ -50,9 +49,16 @@ function App() {
 
     // A conditional statement to check if the birthdate selected is before a date available in the database, if so the application will display the most recent picture for the birthday submitted for the earliest year available, else set the original input to original chosenBirthdate
     if(chosenBirthdateParsed <= earliestDatabaseDate) {
-      chosenBirthdateParsed.setFullYear(1996);
-      let chosenBirthdateString = chosenBirthdateParsed.toISOString().split('T')[0];
-      setUserBirthdate(chosenBirthdateString);
+      try {
+        chosenBirthdateParsed.setFullYear(1996);
+        let chosenBirthdateString = chosenBirthdateParsed.toISOString().split('T')[0];
+
+        console.log(chosenBirthdateString);
+
+        setUserBirthdate(chosenBirthdateString);
+      } catch(error) {
+        alert(error);
+      }
     } else {
       setUserBirthdate(chosenBirthdate);
     }
