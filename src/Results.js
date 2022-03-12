@@ -9,7 +9,7 @@ function Results(props) {
                 {/* Set src and alt using dot notation and the props object passed. */}
                 {/* The data only returns one photo of the day, display result using props attributes. */}
                 {
-                    <img src={props.birthdatePhoto.url} alt={`NASAs photo-of-the-day for ${props.birthdatePhoto.date}`} />
+                    <img src={props.birthdatePhoto.url} alt={`NASAs pic-of-the-day for ${props.birthdatePhoto.date}`} />
                 }
             </div>
         </div>
