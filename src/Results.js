@@ -1,9 +1,22 @@
 //  ** Results.js Component
 // A component that will display the final birthdate photo
+function Results(props) {
+    console.log(props);
 
-// Pass props!
+    return (
+        <div className="results-photo">
+            <div className="img-container">    
+                {/* Set src and alt using dot notation and the props object passed. */}
+                {/* The data only returns one photo of the day, display result using props attributes. */}
+                {
+                    <img src={props.birthdatePhoto.url} alt={`The photo taken by NASA on ${props.birthdatePhoto.date}`} />
+                }
+            </div>
+        </div>
+    )
+}
 
-// The data only returns one photo of the day, display result using props attributes.
-// set src and alt using dot notation and the props object passed.
+
 
 // export Results.js
+export default Results;
