@@ -4,6 +4,7 @@ import axios from 'axios';
 import BirthdateForm from './BirthdateForm';
 import Results from './Results';
 import logo from './assets/nasa-logo.png';
+import Footer from './Footer';
 
 
 
@@ -80,7 +81,9 @@ function App() {
           </div>
         </div>
       </header>
+      <Footer />
     </div>
+    
   );
 
 }
