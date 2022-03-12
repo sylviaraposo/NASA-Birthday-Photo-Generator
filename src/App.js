@@ -12,7 +12,7 @@ function App() {
 
   // Create state items to hold data coming in from the user input and third-party NASA API
   //  - userBirthdate, setUserBirthdate 
-  const [userBirthdate, setUserBirthdate] = useState('');
+  const [userBirthdate, setUserBirthdate] = useState('2020-07-24');
 
   //  - birthdateResultPhoto, setBirthdateResultPhoto
   const [ birthdateResultPhoto, setBirthdateResultPhoto ] = useState ('');
