@@ -28,13 +28,13 @@ img {
   max-width: 100%;
   border-radius: 10px;
   display: block;
+  width: 400px;
   box-shadow: 6px 6px 15px rgb(0, 0, 0);
 }
 
 .img-container { 
   filter: brightness(120%);
   position: relative;
-  width: 500px;
   padding:3px;
   border-radius: 10px;
   /* background-image: linear-gradient(43deg, #ffffff 0%, #ffffff 46%, #ffffff 100%);  */
