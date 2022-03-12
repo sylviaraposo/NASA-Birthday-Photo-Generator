@@ -29,7 +29,7 @@ function BirthdateForm(props) {
                     name="birthDate" 
                     id="birthDate" 
                     onChange={handleChange}
-                    value={dateValue}
+                    value='2021-01-25'
                 />
                 <button>Generate</button>
             </form>
