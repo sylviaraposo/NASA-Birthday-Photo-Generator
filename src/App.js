@@ -43,7 +43,19 @@ function App() {
   const selectBirthdayDate = function (event, chosenBirthdate) {
     event.preventDefault();
     console.log('form submitted');
-    setUserBirthdate(chosenBirthdate);
+
+    // convert the birthdate passed in to a date to validate its within the data
+    let chosenBirthdateParsed = new Date(Date.parse((chosenBirthdate).replace(/-/g, " ")))
+    let earliestDatabaseDate = new Date('June 16, 1995')
+
+    // A conditional statement to check if the birthdate selected is before a date available in the database, if so the application will display the most recent picture for the birthday submitted for the earliest year available, else set the original input to original chosenBirthdate
+    if(chosenBirthdateParsed <= earliestDatabaseDate) {
+      chosenBirthdateParsed.setFullYear(1996);
+      let chosenBirthdateString = chosenBirthdateParsed.toISOString().split('T')[0];
+      setUserBirthdate(chosenBirthdateString);
+    } else {
+      setUserBirthdate(chosenBirthdate);
+    }
   }
 
   // Render the application

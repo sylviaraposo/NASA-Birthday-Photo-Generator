@@ -1,8 +1,6 @@
 //  ** Results.js Component
 // A component that will display the final birthdate photo
 function Results(props) {
-    console.log(props);
-
     return (
         <div className="results-photo">
             <div className="img-container">    
