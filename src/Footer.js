@@ -1,5 +1,5 @@
 // Footer.js
-import './Footer.css'
+import './App.css'
 
 function Footer() {
     return (
